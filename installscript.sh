@@ -17,7 +17,7 @@ sudo dnf update --refresh
 
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg power-profiles-daemon NetworkManager-wifi fuse fuse-libs fastfetch pipewire-pulse @hardware-support
 sudo akmods --force
-sudo dracut --regenerate-all
+sudo dracut --regenerate-all --force
 
 echo "required packages installed"
 
