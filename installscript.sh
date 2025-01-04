@@ -16,6 +16,8 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 sudo dnf update --refresh
 
 sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg power-profiles-daemon NetworkManager-wifi fuse fuse-libs fastfetch pipewire-pulse @hardware-support
+sudo akmods --force
+sudo dracut --regenerate-all
 
 echo "required packages installed"
 
@@ -31,3 +33,4 @@ echo "installed Extension Manager"
 sudo systemctl set-default graphical
 echo "enabled desktop mode"
 
+reboot
