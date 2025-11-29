@@ -15,16 +15,13 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 
 sudo dnf update --refresh
 
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg power-profiles-daemon NetworkManager-wifi fuse fuse-libs fastfetch pipewire-pulse network-manager-applet @hardware-support
-sudo akmods --force
-sudo dracut --regenerate-all --force -v
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg tuned-ppd fastfetch pipewire-pulse network-manager-applet
+sudo akmods --force --rebuild
+sudo dracut --regenerate-all --force --verbose
 echo "required packages installed"
 
-sudo dnf install gnome-shell gnome-tweaks file-roller firefox unzip unrar p7zip gnome-backgrounds nautilus gnome-terminal gnome-terminal-nautilus gnome-software gnome-control-center gnome-system-monitor
+sudo dnf install gnome-shell gnome-tweaks file-roller firefox unzip unrar p7zip gnome-backgrounds nautilus flatpak gnome-software gnome-control-center gnome-system-monitor gnome-text-editor ptyxis
 echo "installed gnome"
-
-sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-echo "enabled Flathub"
 
 sudo systemctl set-default graphical
 echo "enabled desktop mode"
