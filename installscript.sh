@@ -15,7 +15,7 @@ sudo dnf install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-
 
 sudo dnf update --refresh
 
-sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg compat-ffmpeg4 tuned-ppd fastfetch pipewire-pulse network-manager-applet
+sudo dnf install akmod-nvidia xorg-x11-drv-nvidia-cuda xorg-x11-drv-nvidia-power git ffmpeg compat-ffmpeg4 tuned-ppd fastfetch pipewire-pulse network-manager-applet NetworkManager-wifi
 sudo sh -c 'echo "%_with_kmod_nvidia_open 1" > /etc/rpm/macros.nvidia-kmod'
 sudo akmods --force --rebuild
 sudo dracut --regenerate-all --force --verbose
